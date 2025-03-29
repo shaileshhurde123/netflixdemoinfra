@@ -3,7 +3,7 @@ region = "us-east-1"
 }
 
 resource "aws_instance" "one" {
-count = 4
+count = 5
 ami = "ami-04aa00acb1165b32a"
 instance_type = "t2.micro"
 key_name = "shail-us-east-key-pair"
@@ -14,5 +14,5 @@ Name = var.instance_names[count.index]
 }
 
 variable "instance_names" {
-default = ["jenkins", "tomcat-1", "tomcat-2", "Monitoring server"]
+default = ["ansible", "dev-1", "dev-2", "test-1","test-2"]
 }
